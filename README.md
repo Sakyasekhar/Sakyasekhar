@@ -15,8 +15,8 @@
 
 ### 📊 My Stats
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Sakyasekhar&theme=tokyonight&show_icons=true&hide_border=true&count_private=true" alt="GitHub Stats" />
-  <img src="https://leetcard.jacoblin.cool/sakyasekhar?theme=light&ext=heatmap" alt="LeetCode Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Sakyasekhar&theme=dark&show_icons=true&hide_border=true&count_private=true" alt="GitHub Stats" />
+  <img src="https://leetcard.jacoblin.cool/sakyasekhar?theme=dark&ext=heatmap" alt="LeetCode Stats" />
   <img src="https://codeforces-readme-stats.vercel.app/api/card?username=sakyasekhar&theme=github_dark&disable_animations=false&show_icons=true&force_username=true" alt="codeforces" />
 </p>
 
