@@ -27,17 +27,6 @@ jobs:
           CODEFORCES_RATING=$(echo $CODEFORCES_RESPONSE | jq -r '.result[0].rating // "Unrated"')
           echo "::set-output name=rating::${CODEFORCES_RATING}"
 
-      - name: Fetch CodeChef Rating
-        id: codechef
-        run: |
-          CODECHEF_HANDLE="sakyasekhar"
-          CODECHEF_API_URL="https://www.codechef.com/users/${CODECHEF_HANDLE}"
-          CODECHEF_HTML=$(curl -s ${CODECHEF_API_URL})
-          CODECHEF_RATING=$(echo $CODECHEF_HTML | grep -oP '(?<=<div class="rating-number">)\d+(?=</div>)')
-          if [ -z "$CODECHEF_RATING" ]; then
-            CODECHEF_RATING="Unrated"
-          fi
-          echo "::set-output name=rating::${CODECHEF_RATING}"
 
       - name: Update README with Latest Stats
         run: |
