@@ -11,7 +11,6 @@
 ### 🚀 About Me
 - 🔭 I’m currently working on enhancing my skills in **React**, **Next.js**, and **Node.js**.
 - 🌐 I enjoy solving programming challenges on **CodeChef**, **Codeforces**, and **LeetCode**.
-- 💬 Ask me about **JavaScript**, **TypeScript**, **Web Development**, and **Algorithms**.
 - 📚 I’m passionate about continuous learning and staying updated with the latest web technologies.
 
 ### 📊 My Stats
