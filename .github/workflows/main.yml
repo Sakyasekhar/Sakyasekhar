@@ -1,0 +1,59 @@
+name: Update Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * 1' # Runs every Monday at midnight UTC
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Fetch Codeforces Rating
+        id: codeforces
+        run: |
+          CODEFORCES_HANDLE="sakyasekhar"
+          CODEFORCES_API_URL="https://codeforces.com/api/user.info?handles=${CODEFORCES_HANDLE}"
+          CODEFORCES_RESPONSE=$(curl -s ${CODEFORCES_API_URL})
+          CODEFORCES_STATUS=$(echo $CODEFORCES_RESPONSE | jq -r '.status')
+          if [ "$CODEFORCES_STATUS" != "OK" ]; then
+            echo "Error fetching Codeforces rating"
+            exit 1
+          fi
+          CODEFORCES_RATING=$(echo $CODEFORCES_RESPONSE | jq -r '.result[0].rating // "Unrated"')
+          echo "::set-output name=rating::${CODEFORCES_RATING}"
+
+      - name: Fetch CodeChef Rating
+        id: codechef
+        run: |
+          CODECHEF_HANDLE="sakyasekhar"
+          CODECHEF_API_URL="https://www.codechef.com/users/${CODECHEF_HANDLE}"
+          CODECHEF_HTML=$(curl -s ${CODECHEF_API_URL})
+          CODECHEF_RATING=$(echo $CODECHEF_HTML | grep -oP '(?<=<div class="rating-number">)\d+(?=</div>)')
+          if [ -z "$CODECHEF_RATING" ]; then
+            CODECHEF_RATING="Unrated"
+          fi
+          echo "::set-output name=rating::${CODECHEF_RATING}"
+
+      - name: Update README with Latest Stats
+        run: |
+          CODEFORCES_RATING=${{ steps.codeforces.outputs.rating }}
+          CODECHEF_RATING=${{ steps.codechef.outputs.rating }}
+
+          # Replace Codeforces badge
+          sed -i "s|https://img.shields.io/badge/Codeforces-Rating-1700-blue?logo=codeforces|https://img.shields.io/badge/Codeforces-Rating-${CODEFORCES_RATING}-blue?logo=codeforces|" README.md
+
+          # Replace CodeChef badge
+          sed -i "s|https://img.shields.io/badge/CodeChef-Rating-1600-green?logo=codechef|https://img.shields.io/badge/CodeChef-Rating-${CODECHEF_RATING}-green?logo=codechef|" README.md
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Update Codeforces and CodeChef stats"
+          git push
