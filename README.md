@@ -13,11 +13,21 @@
 - 🌐 I enjoy solving programming challenges on **CodeChef**, **Codeforces**, and **LeetCode**.
 - 📚 I’m passionate about continuous learning and staying updated with the latest web technologies.
 
+
+
+
+
 ### 📊 My Stats
+![LeetCode Rating](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabout-coderme.vercel.app%2Fleetcode%2FSakyasekhar&query=%24.rating&style=flat-square&label=LeetCode)  
+![Codeforces Rating](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabout-coderme.vercel.app%2Fcodeforces%2Fsakyasekhar&query=%24.rating&style=flat-square&label=Codeforces)  
+![Codechef Rating](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcoderme.vercel.app%2Fcodechef%2Fsakyasekhar&query=%24.rating&style=flat-square&label=Codechef)  
+
 <p align="center">
   <img src="https://leetcard.jacoblin.cool/sakyasekhar?theme=dark&ext=heatmap" alt="LeetCode Stats" />
   <img src="https://codeforces-readme-stats.vercel.app/api/card?username=sakyasekhar&theme=github_dark&disable_animations=false&show_icons=true&force_username=true" alt="codeforces" />
+  
 </p>
+
 
 ---
 
