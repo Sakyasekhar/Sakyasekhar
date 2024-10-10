@@ -80,17 +80,3 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=sakyasekhar&theme=radical" alt="GitHub Streak" />
 </p>
 
----
-
-### 📝 Latest Blog Posts
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
-*Add your latest blog posts here if you have any.*
-
----
-
-### 🔥 GitHub Trophies
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=sakyasekhar&theme=radical&row=1" alt="GitHub Trophies" />
-</p>
-
