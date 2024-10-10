@@ -1,10 +1,10 @@
 <h1 align="center">Hi 👋, I'm Sakya Sekhar Gangarapu</h1>
 <h3 align="center">A passionate Web Developer from India</h3>
 
-<p align="center">
-  🌱 I’m currently learning **full-stack web development**.<br>
-  📫 How to reach me: <a href="mailto:sakyasekhar.g@gmail.com">sakyasekhar.g@gmail.com</a>
-</p>
+
+🌱 I’m currently learning **full-stack web development** <br>
+📫 How to reach me: <a href="mailto:sakyasekhar.g@gmail.com">sakyasekhar.g@gmail.com</a>
+
 
 ---
 
