@@ -18,6 +18,7 @@
 
 
 ### 📊 My Stats
+#### Contest Ratings
 ![LeetCode Rating](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabout-coderme.vercel.app%2Fleetcode%2FSakyasekhar&query=%24.rating&style=flat-square&label=LeetCode)  
 ![Codeforces Rating](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabout-coderme.vercel.app%2Fcodeforces%2Fsakyasekhar&query=%24.rating&style=flat-square&label=Codeforces)  
 ![Codechef Rating](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcoderme.vercel.app%2Fcodechef%2Fsakyasekhar&query=%24.rating&style=flat-square&label=Codechef)  
